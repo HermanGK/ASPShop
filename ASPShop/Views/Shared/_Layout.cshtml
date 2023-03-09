@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ASPShop</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ASPShop.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="hat-container">
+            <span><a class="HatSpan" style="color:#fff136;" href="/Home"> Natus Vincere </a> </span>
+            <ul class="list1" id="navbar_example">
+                <li>
+                    <a href="/Device/index">Девайсы</a>
+
+                    <ul>
+                        <li><a href="/Mouse/index">Мышки</a></li>
+                        <li><a href="/Keyboards/index">Клавиатуры</a></li>
+                        <li><a href="/Mousepads/index">Коврики</a></li>
+                    </ul>
+                
+                </li>
+                <li><a href= "/Hoody/index">Худи</a></li>
+                <li><a href="/Cap/index" >Кепки</a></li>
+                <li><a href="/Jacket/index" >Куртки</a></li>
+            </ul>
+            
+        </div>
+        
+        
+    </header>
+    <div class="main-info">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <div class="reg-log">
+        <partial name="_LoginPartial" />
+    </div>
+
+    
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

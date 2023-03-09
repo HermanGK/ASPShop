@@ -1,0 +1,27 @@
+﻿@model List<Main>
+@{
+    ViewData["Title"] = "Корзина";
+}
+    
+
+<div class='CartItems'>
+    <p class="noitems">@ViewBag.NoItems</p>
+    @foreach(Main el in Model)
+    {
+    <div class="inside">
+    <h3 id="insideName">Товар: @el.Name</h3>
+    <h4 id="insidePrice"> Цена: @el.Price.ToString("c")</h4>
+    
+    </div>
+    }
+    @if (ViewBag.Summ != null)
+    {
+        <h4>Сумма к оплате: @ViewBag.Summ.ToString("c") </h4>
+        <a href="/Cart/Order" class="button7">Оплатить</a>
+        <a href="/Cart/DeleteFromCart" class="button7">Удалить всё</a>
+    }
+    
+    
+</div>
+
+    

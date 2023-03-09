@@ -1,0 +1,7 @@
+﻿@model List<Main>
+@{
+    ViewData["Title"] = "Мышки";
+}
+
+@foreach (Main el in Model)
+    @Html.Partial("Connectitems", el)

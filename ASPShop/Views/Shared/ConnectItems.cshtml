@@ -1,0 +1,13 @@
+﻿@model ASPShop.Models.Main
+
+
+
+
+
+    <div class='item'>
+    <h3>  <img src="~/img/@Model.Img" alt="@Model.Text">  </h3>
+    <h3>@Model.Name</h3>
+    <h4>@Model.Price.ToString("c")</h4>
+    <p class="product">@Model.Text</p>
+        <a href="/cart/addtocart/@Model.Id" class="button7">Добавить в корзину</a>
+    </div>

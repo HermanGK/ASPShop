@@ -1,0 +1,34 @@
+﻿@model Orders
+
+
+<h1 id="OrderLogo">Оформление заказа!</h1>
+
+<div class="orderTable">
+<form method="post" asp asp-controller="Cart" asp-action="Order">
+    
+    <label asp-for="Name" class="insidename"></label>
+    <input asp-for="Name" class="insidecolomn"/>
+    <span asp-validation-for="Name" id="errorName"></span>
+
+    <label asp-for="LastName" class="insidename"></label>
+    <input asp-for="LastName" class="insidecolomn"/>
+    <span asp-validation-for="LastName" id="errorSurname"></span>
+
+    <label asp-for="City" class="insidename"></label>
+    <input asp-for="City" class="insidecolomn"/>
+    <span asp-validation-for="City" id="errorCity"></span>
+
+    <label asp-for="Street" class="insidename"></label>
+    <input asp-for="Street" class="insidecolomn"/>
+    <span asp-validation-for="Street" id="errorStreet"></span>
+
+    <label asp-for="AirCode" class="insidename"></label>
+    <input asp-for="AirCode" class="insidecolomn"/>
+    <span asp-validation-for="AirCode" id="errorAir"></span>
+
+    <input asp-for="Cart" type="hidden" value="@ViewBag.sessionItems" />
+    <span asp-validation-for="Cart" id="errorCart"></span>
+    
+    <input id="accept" type="submit" value="Оплатить"/>
+</form>
+</div>

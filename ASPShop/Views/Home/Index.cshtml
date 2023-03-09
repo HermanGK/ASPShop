@@ -1,0 +1,8 @@
+﻿@model List<Main>
+@{
+    ViewData["Title"] = "Главная";
+}
+
+
+@foreach (Main el in Model)
+    @Html.Partial("Connectitems", el)
